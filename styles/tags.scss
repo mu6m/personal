@@ -1,0 +1,69 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+a {
+	text-decoration: none;
+	// text-decoration: underline;
+	// text-underline-offset: 5px;
+	// white-space: pre;
+	// cursor: pointer;
+	// &:hover {
+	// 	text-decoration-style: dashed;
+	// }
+}
+body {
+	background-color: hsla(158, 23%, 18%, 1);
+}
+
+ul,
+ol {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	li {
+		line-height: 1.48;
+		list-style-position: inside;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+details {
+	display: flex;
+	flex-direction: column;
+	p {
+		margin-top: 0.5rem;
+	}
+}
+pre {
+	padding: 1rem 1.5rem;
+	max-width: 100%;
+	overflow: auto;
+	background: #1b1b1b;
+	code {
+		word-wrap: break-word;
+		color: #fff;
+		font-family: "Fira Code", monospace;
+	}
+}
+mark {
+	background-color: #ffdd33;
+	padding: 3px 5px;
+	border-radius: 4px;
+}
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+figure {
+	margin: 0;
+	text-align: center;
+	figcaption {
+		font-size: 0.8rem;
+	}
+}
