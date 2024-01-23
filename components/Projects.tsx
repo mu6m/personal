@@ -16,7 +16,7 @@ export default function Projects() {
 			border-radius: 16px;
 			border: 1px solid rgba(255, 255, 255, 0.3);
 			overflow: hidden;
-			box-shadow: 0 4px 8px rgba(95, 222, 173, 0.2);
+			box-shadow: 0 0px 8px rgba(3, 68, 43, 0.2);
 			.image {
 				overflow: hidden;
 				max-height: 15rem;
@@ -91,12 +91,12 @@ export default function Projects() {
 						className="project"
 						whileHover={{
 							scale: 1.03,
-							boxShadow: "0 4px 8px rgba(95, 222, 173, 0.8)",
+							boxShadow: "0 4px 8px rgba(3, 68, 43, 0.8)",
 							transition: { duration: 0.2 },
 						}}
 						whileTap={{ scale: 0.9 }}
-						initial={{ overflow: "hidden", opacity: 0, x: "100%" }}
-						whileInView={{ opacity: 1, x: 0 }}
+						initial={{ opacity: 0, y: "70%" }}
+						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.4 }}
 					>
@@ -108,12 +108,10 @@ export default function Projects() {
 							<div className="tags">
 								{item.using.map((tag, index) => {
 									return (
-										<>
-											<div className="tag" key={tag}>
-												{tag}
-											</div>
+										<div className="tag" key={tag}>
+											{tag}
 											{index !== item.using.length - 1 && <>{" + "}</>}
-										</>
+										</div>
 									);
 								})}
 							</div>
