@@ -85,6 +85,7 @@ export default function Projects() {
 			{frontend.map((item) => {
 				return (
 					<motion.a
+						key={item.name}
 						href={item.link}
 						target="_blank"
 						className="project"
@@ -108,7 +109,9 @@ export default function Projects() {
 								{item.using.map((tag, index) => {
 									return (
 										<>
-											<div className="tag">{tag}</div>
+											<div className="tag" key={tag}>
+												{tag}
+											</div>
 											{index !== item.using.length - 1 && <>{" + "}</>}
 										</>
 									);
