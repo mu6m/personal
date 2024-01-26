@@ -1,8 +1,8 @@
 "use client";
 import Projects from "@/components/Projects";
 import styled from "@emotion/styled";
-
 import { motion } from "framer-motion";
+import { projectList } from "@/lib/info";
 
 const MainHero = styled.div`
 	width: 100%;
@@ -37,8 +37,12 @@ const MainHero = styled.div`
 	@media (max-width: 60rem) {
 		h1 {
 			max-width: 40rem;
-			line-height: 7rem;
-			font-size: 5rem;
+			line-height: 5rem;
+			font-size: 3.8rem;
+		}
+		p {
+			font-size: 0.8rem;
+			max-width: 19rem;
 		}
 	}
 `;
@@ -59,7 +63,7 @@ export default function Page() {
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity: 1,
-						backgroundSize: ["100rem", "50rem", "70rem", "60rem", "100rem"],
+						backgroundSize: ["70rem", "50rem", "70rem", "60rem", "70rem"],
 						transition: {
 							backgroundSize: {
 								duration: 5,
@@ -83,11 +87,12 @@ export default function Page() {
 						transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.4 },
 					}}
 				>
-					I'm passionate about crafting web application that are engaging,
-					accessible, and seo-friendly.
+					And I'm passionate about making web application that are engaging,
+					accessible and fast.
 				</motion.p>
 			</MotionHero>
-			<Projects />
+
+			<Projects frontend={projectList.frontend.slice(0, 3)} />
 		</>
 	);
 }

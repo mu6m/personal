@@ -1,6 +1,7 @@
 "use client";
 import Projects from "@/components/Projects";
 import styled from "@emotion/styled";
+import { projectList } from "@/lib/info";
 
 const MainHero = styled.div`
 	width: 100%;
@@ -32,7 +33,7 @@ export default function Page() {
 	return (
 		<>
 			<MainHero>{/* <h1 className="head-text">My Projects</h1> */}</MainHero>
-			<Projects />
+			<Projects frontend={projectList.frontend} />
 		</>
 	);
 }

@@ -3,7 +3,7 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
-export default function Projects() {
+export default function Projects({ frontend, backend }: any) {
 	const MainDiv = styled.div`
 		margin-block: 2rem;
 		display: flex;
@@ -13,10 +13,7 @@ export default function Projects() {
 			flex-direction: column;
 			width: 100%;
 			max-width: 30rem;
-			border-radius: 16px;
-			border: 1px solid rgba(255, 255, 255, 0.3);
 			overflow: hidden;
-			box-shadow: 0 0px 8px rgba(3, 68, 43, 0.2);
 			.image {
 				overflow: hidden;
 				max-height: 15rem;
@@ -59,44 +56,50 @@ export default function Projects() {
 			font-family: "Playfair Display", serif;
 			font-size: 5rem;
 			position: relative;
-			left: -5rem;
+			margin-block: 1rem;
+			.overflow-background {
+				position: absolute;
+				bottom: 1rem;
+				left: -1rem;
+				width: 20rem;
+				height: 2rem;
+				background-color: #648d64; /* Replace with your desired background color */
+				z-index: -1; /* Place it behind the content */
+			}
 		}
 		@media (max-width: 60rem) {
+			padding-inline: 2rem;
 			.header-project {
-				left: -1rem;
+				font-size: 3rem;
+				left: -1.6rem;
+				.overflow-background {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 20rem;
+					height: 2rem;
+					background-color: #648d64; /* Replace with your desired background color */
+					z-index: -1; /* Place it behind the content */
+				}
 			}
 		}
 	`;
 	const MotionDiv = motion(MainDiv);
-	const frontend = [
-		{
-			name: "Payall",
-			images: [
-				"/images/projects/screencapture-payall-dev-vercel-app-2024-01-23-17_18_02.png",
-			],
-			using: ["nextjs", "sass", "styled components"],
-			d: "a consept payment company website heavily inspired by behance",
-			link: "https://payall-dev.vercel.app/",
-		},
-	];
 	return (
 		<MotionDiv>
-			<motion.h2 className="header-project">Fontend</motion.h2>
-			{frontend.map((item) => {
+			<motion.h2 className="header-project">
+				<div className="overflow-background" />
+				Fontend
+			</motion.h2>
+			{frontend.map((item: any) => {
 				return (
 					<motion.a
 						key={item.name}
 						href={item.link}
 						target="_blank"
 						className="project"
-						whileHover={{
-							scale: 1.03,
-							boxShadow: "0 4px 8px rgba(3, 68, 43, 0.8)",
-							transition: { duration: 0.2 },
-						}}
-						whileTap={{ scale: 0.9 }}
-						initial={{ opacity: 0, y: "70%" }}
-						whileInView={{ opacity: 1, y: 0 }}
+						initial={{ scale: 0 }}
+						whileInView={{ scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.4 }}
 					>
@@ -106,7 +109,7 @@ export default function Projects() {
 						<div className="info">
 							<h2>{item.name}</h2>
 							<div className="tags">
-								{item.using.map((tag, index) => {
+								{item.using.map((tag: string, index: number) => {
 									return (
 										<div className="tag" key={tag}>
 											{tag}
@@ -120,7 +123,10 @@ export default function Projects() {
 					</motion.a>
 				);
 			})}
-			<motion.h2 className="header-project">Backend</motion.h2>
+			<motion.h2 className="header-project">
+				<div className="overflow-background" />
+				Backend
+			</motion.h2>
 		</MotionDiv>
 	);
 }

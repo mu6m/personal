@@ -29,6 +29,8 @@ function NavItem({ text, path, route }: any) {
 export default function Nav() {
 	const pathname = usePathname();
 	const MainNav = styled.nav`
+		z-index: 10;
+		position: fixed;
 		max-width: 30rem;
 		width: 100%;
 		display: flex;
@@ -38,14 +40,12 @@ export default function Nav() {
 		align-items: center;
 		justify-content: space-between;
 		align-content: center;
-		position: absolute;
 		top: 1rem;
 
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(60px);
 
 		.item {
 			padding-inline: 1rem;
@@ -60,6 +60,10 @@ export default function Nav() {
 			pointer-events: none;
 		}
 		@media (max-width: 60rem) {
+			max-width: 20rem;
+			.item {
+				font-size: 0.8rem;
+			}
 		}
 	`;
 	const navObj = [
