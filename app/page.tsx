@@ -63,14 +63,13 @@ export default function Page() {
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity: 1,
-						backgroundSize: ["70rem", "50rem", "70rem", "60rem", "70rem"],
+						backgroundSize: ["70rem", "40rem"],
 						transition: {
 							backgroundSize: {
 								duration: 5,
 								repeat: Infinity,
 							},
-							ease: [0.455, 0.03, 0.515, 0.955],
-							duration: 0.5,
+							duration: 0.8,
 						},
 					}}
 				>

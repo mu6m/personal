@@ -31,6 +31,9 @@ const About = styled.div`
 		gap: 0.5rem;
 	}
 	@media (max-width: 60rem) {
+		.desc {
+			padding-inline: 2rem;
+		}
 	}
 `;
 export default function Page() {

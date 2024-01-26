@@ -84,13 +84,12 @@ export default function Projects({ frontend, backend }: any) {
 			}
 		}
 	`;
-	const MotionDiv = motion(MainDiv);
 	return (
-		<MotionDiv>
-			<motion.h2 className="header-project">
+		<MainDiv>
+			<h2 className="header-project">
 				<div className="overflow-background" />
 				Fontend
-			</motion.h2>
+			</h2>
 			{frontend.map((item: any) => {
 				return (
 					<motion.a
@@ -98,10 +97,10 @@ export default function Projects({ frontend, backend }: any) {
 						href={item.link}
 						target="_blank"
 						className="project"
-						initial={{ scale: 0 }}
+						initial={{ scale: 0.9 }}
 						whileInView={{ scale: 1 }}
 						viewport={{ once: true }}
-						transition={{ duration: 0.4 }}
+						transition={{ duration: 0.7 }}
 					>
 						<div className="image">
 							<img src={item.images[0]} />
@@ -123,10 +122,10 @@ export default function Projects({ frontend, backend }: any) {
 					</motion.a>
 				);
 			})}
-			<motion.h2 className="header-project">
+			<h2 className="header-project">
 				<div className="overflow-background" />
 				Backend
-			</motion.h2>
-		</MotionDiv>
+			</h2>
+		</MainDiv>
 	);
 }
