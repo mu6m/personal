@@ -23,7 +23,7 @@ const MainHero = styled.div`
 		line-height: 8rem;
 		margin-bottom: 2rem;
 		background: radial-gradient(circle, #5fdead 1px, transparent 20%);
-		background-size: 100rem;
+		background-size: 70rem;
 		background-repeat: none;
 		background-position: center;
 	}
@@ -63,11 +63,10 @@ export default function Page() {
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity: 1,
-						backgroundSize: ["70rem", "40rem"],
+						backgroundSize: ["30rem", "70rem"],
 						transition: {
 							backgroundSize: {
-								duration: 5,
-								repeat: Infinity,
+								duration: 0.7,
 							},
 							duration: 0.8,
 						},
