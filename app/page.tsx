@@ -3,6 +3,7 @@ import Projects from "@/components/Projects";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { projectList } from "@/lib/info";
+import Contact from "@/components/Contact";
 
 const MainHero = styled.div`
 	width: 100%;
@@ -106,6 +107,7 @@ export default function Page() {
 				others={projectList.others.slice(0, 3)}
 			/>
 			<Other href="/projects">View All Projects</Other>
+			<Contact />
 		</>
 	);
 }
