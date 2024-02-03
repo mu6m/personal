@@ -3,7 +3,7 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
-export default function Projects({ frontend, backend }: any) {
+export default function Projects({ frontend, backend, others }: any) {
 	const MainDiv = styled.div`
 		margin-block: 2rem;
 		display: flex;
@@ -126,6 +126,74 @@ export default function Projects({ frontend, backend }: any) {
 				<div className="overflow-background" />
 				Backend
 			</h2>
+			{backend.map((item: any) => {
+				return (
+					<motion.a
+						key={item.name}
+						href={item.link}
+						target="_blank"
+						className="project"
+						initial={{ scale: 0.9 }}
+						whileInView={{ scale: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7 }}
+					>
+						<div className="image">
+							<img src={item.images[0]} />
+						</div>
+						<div className="info">
+							<h2>{item.name}</h2>
+							<div className="tags">
+								{item.using.map((tag: string, index: number) => {
+									return (
+										<div className="tag" key={tag}>
+											{tag}
+											{index !== item.using.length - 1 && <>{" + "}</>}
+										</div>
+									);
+								})}
+							</div>
+							<p>{item.d}</p>
+						</div>
+					</motion.a>
+				);
+			})}
+			<h2 className="header-project">
+				<div className="overflow-background" />
+				Other
+			</h2>
+			{others.map((item: any) => {
+				return (
+					<motion.a
+						key={item.name}
+						href={item.link}
+						target="_blank"
+						className="project"
+						initial={{ scale: 0.9 }}
+						whileInView={{ scale: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7 }}
+					>
+						<div className="image">
+							<img src={item.images[0]} />
+						</div>
+						<div className="info">
+							<h2>{item.name}</h2>
+							<div className="tags">
+								{item.using.map((tag: string, index: number) => {
+									return (
+										<div className="tag" key={tag}>
+											{tag}
+											{index !== item.using.length - 1 && <>{" + "}</>}
+										</div>
+									);
+								})}
+							</div>
+							<p>{item.d}</p>
+						</div>
+					</motion.a>
+				);
+			})}
 		</MainDiv>
 	);
 }

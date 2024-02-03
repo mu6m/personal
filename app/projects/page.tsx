@@ -33,7 +33,11 @@ export default function Page() {
 	return (
 		<>
 			<MainHero>{/* <h1 className="head-text">My Projects</h1> */}</MainHero>
-			<Projects frontend={projectList.frontend} />
+			<Projects
+				frontend={projectList.frontend}
+				backend={projectList.backend}
+				others={projectList.others}
+			/>
 		</>
 	);
 }

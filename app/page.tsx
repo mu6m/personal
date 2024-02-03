@@ -46,6 +46,16 @@ const MainHero = styled.div`
 		}
 	}
 `;
+const Other = styled.a`
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	white-space: pre;
+	cursor: pointer;
+	margin-bottom: 2rem;
+	&:hover {
+		text-decoration-style: dashed;
+	}
+`;
 export default function Page() {
 	const MotionHero = motion(MainHero);
 	return (
@@ -90,7 +100,12 @@ export default function Page() {
 				</motion.p>
 			</MotionHero>
 
-			<Projects frontend={projectList.frontend.slice(0, 3)} />
+			<Projects
+				frontend={projectList.frontend.slice(0, 3)}
+				backend={projectList.backend.slice(0, 3)}
+				others={projectList.others.slice(0, 3)}
+			/>
+			<Other href="/projects">View All Projects</Other>
 		</>
 	);
 }
