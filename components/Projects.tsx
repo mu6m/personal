@@ -63,8 +63,8 @@ export default function Projects({ frontend, backend, others }: any) {
 				left: -1rem;
 				width: 20rem;
 				height: 2rem;
-				background-color: #648d64; /* Replace with your desired background color */
-				z-index: -1; /* Place it behind the content */
+				background-color: #648d64;
+				z-index: -1;
 			}
 		}
 		@media (max-width: 60rem) {
@@ -78,8 +78,8 @@ export default function Projects({ frontend, backend, others }: any) {
 					left: 0;
 					width: 20rem;
 					height: 2rem;
-					background-color: #648d64; /* Replace with your desired background color */
-					z-index: -1; /* Place it behind the content */
+					background-color: #648d64;
+					z-index: -1;
 				}
 			}
 		}
