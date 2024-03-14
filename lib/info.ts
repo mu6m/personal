@@ -34,6 +34,13 @@ export const projectList = {
 			d: "a self hosted file storage with folder upload and multiple files support",
 			link: "https://github.com/mu6m/next-drive",
 		},
+		{
+			name: "Recipe Api",
+			images: [],
+			using: ["bunjs", "python", "elysia", "prisma", "postgres"],
+			d: "an api that has search and sort method that 8300+ recipes",
+			link: "https://recipe-api-gest.onrender.com/",
+		},
 	],
 	others: [
 		{
