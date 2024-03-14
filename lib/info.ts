@@ -38,7 +38,7 @@ export const projectList = {
 			name: "Recipe Api",
 			images: [],
 			using: ["bunjs", "python", "elysia", "prisma", "postgres"],
-			d: "an api that has search and sort method that 8300+ recipes",
+			d: "an api that can search and sort recipes it has 8300+ recipes",
 			link: "https://recipe-api-gest.onrender.com/",
 		},
 	],
