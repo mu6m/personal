@@ -21,12 +21,24 @@ const MainHero = styled.div`
 		line-height: 8rem;
 		margin-block: 2rem;
 	}
+
 	@media (max-width: 60rem) {
 		h1 {
 			max-width: 40rem;
 			line-height: 7rem;
 			font-size: 5rem;
 		}
+	}
+`;
+
+const Github = styled.a`
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	white-space: pre;
+	cursor: pointer;
+	margin-block: 2rem;
+	&:hover {
+		text-decoration-style: dashed;
 	}
 `;
 export default function Page() {
@@ -38,6 +50,9 @@ export default function Page() {
 				backend={projectList.backend}
 				others={projectList.others}
 			/>
+			<Github href="https://github.com/mu6m" target="_blank">
+				Here Is The Source Code For My Projects
+			</Github>
 		</>
 	);
 }
