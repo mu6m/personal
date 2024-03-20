@@ -15,8 +15,17 @@ export const projectList = {
 				"/images/projects/screencapture-coin-sav-vercel-app-2024-02-03-20_30_22.png",
 			],
 			using: ["Remixjs", "sass", "styled components", "typescript"],
-			d: "",
+			d: "a website made to mimic a crypto trading platform",
 			link: "https://coin-sav.vercel.app/",
+		},
+		{
+			name: "BlocksBin",
+			images: [
+				"/images/projects/screencapture-localhost-5173-2024-03-20-19_02_11.png",
+			],
+			using: ["sveltekit", "sass", "resendd (email)", "typescript"],
+			d: "A Full Stack website made to sort the your content in a better way",
+			link: "https://blocksbin.vercel.app/",
 		},
 	],
 	backend: [
