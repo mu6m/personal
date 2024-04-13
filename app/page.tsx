@@ -7,26 +7,32 @@ import Contact from "@/components/Contact";
 
 const MainHero = styled.div`
 	width: 100%;
-	max-width: 60rem;
-	min-height: 90vh;
+	max-width: 50rem;
+	margin-top: 20vh;
+	margin-bottom: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 	margin-bottom: 5rem;
-	h1 {
-		font-family: "Playfair Display", serif;
-		font-weight: 800;
-		font-style: italic;
-		padding-inline: 2rem;
-		font-size: 8rem;
-		line-height: 8rem;
-		margin-bottom: 2rem;
-		background: radial-gradient(circle, #5fdead 1px, transparent 20%);
-		background-size: 70rem;
-		background-repeat: none;
-		background-position: center;
+	.containText {
+		max-width: 30rem;
+		h1 {
+			padding-top: 2rem;
+			min-height: 15rem;
+			font-family: "Playfair Display", serif;
+			font-weight: 800;
+			font-style: italic;
+			padding-inline: 2rem;
+			font-size: 6rem;
+			line-height: 6rem;
+			margin-bottom: 2rem;
+			background: radial-gradient(circle, #5fdead 1px, transparent 20%);
+			background-size: 70rem;
+			background-repeat: none;
+			background-position: center;
+		}
 	}
 	p {
 		font-size: 1rem;
@@ -36,10 +42,13 @@ const MainHero = styled.div`
 		max-width: 27rem;
 	}
 	@media (max-width: 60rem) {
-		h1 {
-			max-width: 40rem;
-			line-height: 5rem;
-			font-size: 3.8rem;
+		.containText {
+			h1 {
+				text-align: left;
+				max-width: 30rem;
+				line-height: 6rem;
+				font-size: 6rem;
+			}
 		}
 		p {
 			font-size: 0.8rem;
@@ -70,7 +79,8 @@ export default function Page() {
 					},
 				}}
 			>
-				<motion.h1
+				<motion.div
+					className="containText"
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity: 1,
@@ -83,8 +93,8 @@ export default function Page() {
 						},
 					}}
 				>
-					Hi I'm Abdulhamid Ledraa
-				</motion.h1>
+					<motion.h1>Hi I'm Ledraa</motion.h1>
+				</motion.div>
 				<motion.p
 					initial={{
 						y: "50%",

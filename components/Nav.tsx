@@ -81,7 +81,8 @@ export default function Nav() {
 		},
 		{
 			name: "Contact",
-			link: "/contact",
+			// link: "/contact",
+			link: "/#contact",
 		},
 	];
 	return (

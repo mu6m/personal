@@ -41,7 +41,7 @@ export default function Page() {
 				Email
 			</h1>
 			<div className="desc">
-				<p>abdulhamidledra@gmail.com</p>
+				<p>theledraa@gmail.com</p>
 			</div>
 		</About>
 	);

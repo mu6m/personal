@@ -23,7 +23,7 @@ export const projectList = {
 			images: [
 				"/images/projects/screencapture-localhost-5173-2024-03-20-19_02_11.png",
 			],
-			using: ["sveltekit", "sass", "resendd (email)", "typescript"],
+			using: ["sveltekit", "sass", "resend (email)", "typescript"],
 			d: "A Full Stack website made to sort the your content in a better way",
 			link: "https://blocksbin.vercel.app/",
 		},

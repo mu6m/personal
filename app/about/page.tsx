@@ -45,8 +45,8 @@ export default function Page() {
 			</h1>
 			<div className="desc">
 				<p>
-					Hey there, I'm Abdulhamid a proficient developer who loves tackling a
-					wide variety of tech projects.
+					Hey there, I'm Ledraa a proficient developer who loves tackling a wide
+					variety of tech projects.
 				</p>
 				<p>
 					With a comprehensive skillset ranging from web to databases and system

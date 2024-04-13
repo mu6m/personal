@@ -67,7 +67,7 @@ const About = styled.div`
 `;
 export default function Contact() {
 	return (
-		<About>
+		<About id="contact">
 			<h1 className="header">
 				<div className="overflow-background"></div>
 				Get In Touch
@@ -75,10 +75,10 @@ export default function Contact() {
 			<div className="desc">
 				<p>
 					I am actively seeking new opportunities that can help me grow both
-					personally and professionally. I am committed to expanding my
-					knowledge and experience to grow as a developer. I am not afraid to
-					take on new roles or responsibilities, even if they are outside of my
-					comfort zone.
+					personally and professionally. <br />I am committed to expanding my
+					knowledge and experience to grow as a developer. <br />I am not afraid
+					to take on new roles or responsibilities, even if they are outside of
+					my comfort zone.
 				</p>
 			</div>
 			<motion.a
@@ -90,7 +90,7 @@ export default function Contact() {
 				}}
 				whileTap={{ scale: 0.9 }}
 				className="contact"
-				href="mailto:abdulhamidledra@gmail.com"
+				href="mailto:theledraa@gmail.com"
 			>
 				Contact Me
 			</motion.a>
