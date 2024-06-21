@@ -88,7 +88,7 @@ export default function Projects({ frontend, backend, others }: any) {
 		<MainDiv>
 			<h2 className="header-project">
 				<div className="overflow-background" />
-				Fontend
+				Websites
 			</h2>
 			{frontend.map((item: any) => {
 				return (
@@ -160,7 +160,7 @@ export default function Projects({ frontend, backend, others }: any) {
 			})}
 			<h2 className="header-project">
 				<div className="overflow-background" />
-				Other
+				Others
 			</h2>
 			{others.map((item: any) => {
 				return (
