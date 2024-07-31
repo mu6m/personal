@@ -106,15 +106,16 @@ export default function Page() {
 						transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.4 },
 					}}
 				>
-					And I'm passionate about making web application that are engaging,
-					accessible and fast.
+					my passion is creating free and opensource software for everyone to
+					use, from simple webapps to complex services my goal is to create
+					accessible and reliable software for everyone.
 				</motion.p>
 			</MotionHero>
 
 			<Projects
-				frontend={projectList.frontend.slice(0, 3)}
-				backend={projectList.backend.slice(0, 3)}
-				others={projectList.others.slice(0, 3)}
+				frontend={projectList.frontend.slice(0, 10)}
+				backend={projectList.backend.slice(0, 10)}
+				others={projectList.others.slice(0, 10)}
 			/>
 			<Other href="/projects">View All Projects</Other>
 			<Contact />

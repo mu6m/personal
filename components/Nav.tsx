@@ -76,7 +76,7 @@ export default function Nav() {
 			link: "/projects",
 		},
 		{
-			name: "Blog",
+			name: "My Blog",
 			link: "https://blog.ledraa.space/",
 		},
 		{

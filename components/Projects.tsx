@@ -35,20 +35,12 @@ export default function Projects({ frontend, backend, others }: any) {
 					font-size: 0.9rem;
 				}
 				.tags {
-					margin-block: 0.3rem;
+					margin-block: 0.7rem;
 					display: flex;
 					align-content: center;
 					align-items: center;
 					gap: 0.5rem;
-					.tag {
-						display: flex;
-						justify-content: center;
-						align-content: center;
-						align-items: center;
-						font-size: 0.8rem;
-						font-weight: light;
-						font-style: italic;
-					}
+					font-size: 0.8rem;
 				}
 			}
 		}
@@ -88,7 +80,43 @@ export default function Projects({ frontend, backend, others }: any) {
 		<MainDiv>
 			<h2 className="header-project">
 				<div className="overflow-background" />
-				Websites
+				Fullstack
+			</h2>
+			{backend.map((item: any) => {
+				return (
+					<motion.a
+						key={item.name}
+						href={item.link}
+						target="_blank"
+						className="project"
+						initial={{ scale: 0.9 }}
+						whileInView={{ scale: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7 }}
+					>
+						<div className="image">
+							<img src={item.images[0]} />
+						</div>
+						<div className="info">
+							<h2>{item.name}</h2>
+							<div className="tags">
+								{item.using.map((tag: string, index: number) => {
+									return (
+										<>
+											{tag}
+											{index !== item.using.length - 1 && <>{" + "}</>}
+										</>
+									);
+								})}
+							</div>
+							<p>{item.d}</p>
+						</div>
+					</motion.a>
+				);
+			})}
+			<h2 className="header-project">
+				<div className="overflow-background" />
+				Frontend
 			</h2>
 			{frontend.map((item: any) => {
 				return (
@@ -122,42 +150,7 @@ export default function Projects({ frontend, backend, others }: any) {
 					</motion.a>
 				);
 			})}
-			<h2 className="header-project">
-				<div className="overflow-background" />
-				Backend
-			</h2>
-			{backend.map((item: any) => {
-				return (
-					<motion.a
-						key={item.name}
-						href={item.link}
-						target="_blank"
-						className="project"
-						initial={{ scale: 0.9 }}
-						whileInView={{ scale: 1 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.7 }}
-					>
-						<div className="image">
-							<img src={item.images[0]} />
-						</div>
-						<div className="info">
-							<h2>{item.name}</h2>
-							<div className="tags">
-								{item.using.map((tag: string, index: number) => {
-									return (
-										<div className="tag" key={tag}>
-											{tag}
-											{index !== item.using.length - 1 && <>{" + "}</>}
-										</div>
-									);
-								})}
-							</div>
-							<p>{item.d}</p>
-						</div>
-					</motion.a>
-				);
-			})}
+
 			<h2 className="header-project">
 				<div className="overflow-background" />
 				Others

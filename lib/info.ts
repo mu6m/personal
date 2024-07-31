@@ -1,34 +1,117 @@
 export const projectList = {
-	frontend: [
+	backend: [
 		{
-			name: "Payall",
-			images: [
-				"/images/projects/screencapture-payall-dev-vercel-app-2024-01-23-17_18_02.png",
+			name: "Datafy",
+			images: [],
+			using: [
+				"Nextjs15 rc (latest)",
+				"tailwind",
+				"drizzle orm",
+				"golang (for handling tasks in the backend)",
 			],
-			using: ["Nextjs", "sass", "styled components", "typescript"],
-			d: "a concept payment company website heavily inspired by a design i saw on behance so instead of it being just an idea turned it into a website",
-			link: "https://payall-dev.vercel.app/",
+			d: "a SaaS application that i created to create mock data fast and easy using ai and it is opensource, the app is made using the latest version of nextjs (15rc) with drizzle(better performace) and tailwind the backend is created using golang and asynq for creating a robust and scale-able backend with redis for handling the tasks with it's pub/sub system for Scaleability which is also hosted on fly.io using docker",
+			link: "https://datafy.ledraa.space/",
 		},
 		{
-			name: "CoinSav",
-			images: [
-				"/images/projects/screencapture-coin-sav-vercel-app-2024-02-03-20_30_22.png",
+			name: "Next Store",
+			images: [],
+			using: [
+				"Nextjs",
+				"tailwind",
+				"prisma orm",
+				"Lemon squeezy (for handling payments)",
 			],
-			using: ["Remixjs", "sass", "styled components", "typescript"],
-			d: "a website made to mimic a crypto trading platform",
-			link: "https://coin-sav.vercel.app/",
+			d: "an opensource webapp for creating online stores for business with different sizes aimed for scalability and ability to modify the code with a management system that simplifies different crud operations and focuses on a fast and reliable performance for users/clients made using Nextjs, Tailwind, Prisma, Lemon squeezy(payment handler)",
+			link: "https://github.com/mu6m/next-store",
 		},
 		{
 			name: "BlocksBin",
 			images: [
-				"/images/projects/screencapture-localhost-5173-2024-03-20-19_02_11.png",
+				// "/images/projects/screencapture-localhost-5173-2024-03-20-19_02_11.png",
 			],
 			using: ["sveltekit", "sass", "resend (email)", "typescript"],
-			d: "A Full Stack website made to sort the your content in a better way",
-			link: "https://blocksbin.vercel.app/",
+			d: "A Full Stack website made to sort the your text content in a better way",
+			link: "https://github.com/mu6m/blocks-bin",
+		},
+		{
+			name: "Image Tagger",
+			images: [],
+			using: ["Nextjs", "tailwind", "YOLOv9"],
+			d: "opensource webapp made using nextjs and YOLOv9 model used to generate tags based on user provided images",
+			link: "https://github.com/mu6m/next-store",
+		},
+		{
+			name: "My Invoice",
+			images: [],
+			using: ["Svelte", "tailwind", "prisma orm", "daisy ui"],
+			d: "opensource erp system for creating and managing invoices for restaurants made using svelte with prisma orm and tailwind aimed for fast performance",
+			link: "https://github.com/mu6m/my-invoice",
+		},
+		{
+			name: "WebSocket Handler",
+			images: [],
+			using: ["socket.io", "node.js"],
+			d: "an opensource project for managing websocket lobbies",
+			link: "https://github.com/mu6m/socket.io-lobby-handler",
+		},
+		{
+			name: "Talkomatic",
+			images: [],
+			using: ["Svelte", "Socket.io"],
+			d: "opensource webapp made using svelte and socket.io to simulate how old chat application were made ",
+			link: "https://github.com/mu6m/talkomatic-clone",
+		},
+		{
+			name: "Peer Chat",
+			images: [],
+			using: ["Svelte", "Socket.io", "Webrtc"],
+			d: "opensource webapp made using svelte, socket.io and webrtc to video chat with random users ",
+			link: "https://github.com/mu6m/peer-video-chat",
 		},
 	],
-	backend: [
+	others: [
+		{
+			name: "Rust Captcha",
+			images: [],
+			using: ["Rust", "Serverless"],
+			d: "a serverless app that uses rust to generate captchas and check the user response used to prevent ddos attacks also i made a nextjs app that implements it",
+			link: "https://github.com/mu6m/serverless-captcha",
+		},
+		{
+			name: "DIR lister",
+			images: [],
+			using: ["Golang"],
+			d: "a an app that uses golang to allow the user to upload files and list them from the hosted directory",
+			link: "https://github.com/mu6m/directory-lister",
+		},
+		{
+			name: "Clip It",
+			images: [],
+			using: ["Rust", "ffmpeg"],
+			d: "a program that uses ffmpeg to record a clip ( 15 minutes long ) at highest resolution possible",
+			link: "https://github.com/mu6m/clip-it",
+		},
+		{
+			name: "ReStream",
+			images: [],
+			using: ["Nginx"],
+			d: "a live streaming server made using nginx for streaming to multiple platforms at once",
+			link: "https://github.com/mu6m/nginx-restream",
+		},
+		{
+			name: "Window Timer",
+			images: [],
+			using: ["Rust", "WinApi"],
+			d: "a program that helps you keep track of the time you spent on each window opened",
+			link: "https://github.com/mu6m/window-timer",
+		},
+		{
+			name: "InView",
+			images: [],
+			using: ["Svelte"],
+			d: "an inview hook made for svelte",
+			link: "https://github.com/mu6m/svelte-inview",
+		},
 		{
 			name: "Store Api",
 			images: [],
@@ -51,20 +134,31 @@ export const projectList = {
 			link: "https://github.com/mu6m/recipe-api",
 		},
 	],
-	others: [
+	frontend: [
 		{
-			name: "Clip It",
-			images: [],
-			using: ["Rust", "ffmpeg"],
-			d: "a program that uses ffmpeg to record a clip ( 15 minutes long ) at highest resolution possible",
-			link: "https://github.com/mu6m/clip-it",
+			name: "Payall",
+			images: [
+				"/images/projects/screencapture-payall-dev-vercel-app-2024-01-23-17_18_02.png",
+			],
+			using: ["Nextjs", "sass", "styled components", "typescript"],
+			d: "a concept payment company website heavily inspired by a design i saw on behance so instead of it being just an idea turned it into a website",
+			link: "https://payall-dev.vercel.app/",
 		},
 		{
-			name: "Window Timer",
+			name: "CoinSav",
+			images: [
+				"/images/projects/screencapture-coin-sav-vercel-app-2024-02-03-20_30_22.png",
+			],
+			using: ["Remixjs", "sass", "styled components", "typescript"],
+			d: "a website made to mimic a crypto trading platform",
+			link: "https://coin-sav.vercel.app/",
+		},
+		{
+			name: "Personal",
 			images: [],
-			using: ["Rust", "WinApi"],
-			d: "a program that helps you keep track of the time you spent on each window opened",
-			link: "https://github.com/mu6m/window-timer",
+			using: ["Nextjs", "sass", "styled components"],
+			d: "my personal website",
+			link: "https://github.com/mu6m/personal",
 		},
 	],
 };
